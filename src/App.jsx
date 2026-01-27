@@ -1,14 +1,15 @@
-  import { useState } from 'react'
-  import reactLogo from './assets/react.svg'
-  import viteLogo from '/vite.svg'
-  import './App.css'
-  import Transitions from './components/transitions';
+import { useState } from 'react'
+import './App.css'
+import Transitions from './guide/transition/Transitions';
+import DetailComponent from './components/DetailComponent';
+import GridLayout from './guide/grid-layout/AlignItems';
+import AlignItems from './guide/grid-layout/AlignItems';
 
   function App() {
     const [expanded, setExpanded] = useState(true);
     const [selected, setSelected] = useState()
     const components = [
-      { "id": "transtions", "name": "Transitions", "components": <Transitions /> }
+      { "id": "align", "name": "Align-Items", "components": <AlignItems /> }
     ]
 
     const Preview = components.find(c => c.id === selected)?.components;
