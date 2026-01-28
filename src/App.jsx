@@ -4,13 +4,14 @@ import Transitions from './guide/transition/Transitions';
 import DetailComponent from './components/DetailComponent';
 import GridLayout from './guide/grid-layout/AlignItems';
 import AlignItems from './guide/grid-layout/AlignItems';
-
+import JustifyContent from './guide/Justify/JustifyContent';
 
   function App() {
     const [expanded, setExpanded] = useState(true);
     const [selected, setSelected] = useState()
     const components = [
-      { "id": "align", "name": "Align-Items", "components": <AlignItems /> }
+      { "id": "align", "name": "Align-Items", "components": <AlignItems /> },
+      { "id": "justify", "name":"Justify-Content", "components": <JustifyContent/>}
     ]
 
     const Preview = components.find(c => c.id === selected)?.components;
