@@ -5,6 +5,7 @@ import DetailComponent from './components/DetailComponent';
 import GridLayout from './guide/box-positioning/AlignItems';
 import AlignItems from './guide/box-positioning/AlignItems';
 
+
   function App() {
     const [expanded, setExpanded] = useState(true);
     const [selected, setSelected] = useState()
