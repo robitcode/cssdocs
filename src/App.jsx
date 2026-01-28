@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Transitions from './guide/transition/Transitions';
 import DetailComponent from './components/DetailComponent';
-import GridLayout from './guide/grid-layout/AlignItems';
-import AlignItems from './guide/grid-layout/AlignItems';
+import GridLayout from './guide/box-positioning/AlignItems';
+import AlignItems from './guide/box-positioning/AlignItems';
 
   function App() {
     const [expanded, setExpanded] = useState(true);
