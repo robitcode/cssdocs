@@ -1,6 +1,8 @@
+import profileImg from "../../assets/196452524.png"
 import { useState } from "react";
 import DetailComponent from "../../components/DetailComponent";
 import OutputComponent from "../../components/OutputComponent";
+import HeaderComponent from "../../components/HeaderComponent";
 
 const code = `justify-content : start;
 justify-content : center;
@@ -9,8 +11,13 @@ justify-content : space-around;
 justify-content : space-evenely;`;
 
 export default function JustifyContent() {
-
-    const ouputPanel = {
+    const headerPanel = {
+        'title': 'Using justify-content',
+        'author': 'robit',
+        'authorpfp': profileImg,
+        'topics': ['flexbox', 'justify-content']
+    }
+    const outputPanel = {
         'title': "CSS Demo: justify-content",
         'buttons': [
             { 'name': 'justify-content : start;', 'state': 'justify-start' },
@@ -30,9 +37,10 @@ export default function JustifyContent() {
 
     return (
         <div className="min-h-screen w-full space-y-6">
+            <HeaderComponent header={headerPanel} />
             <DetailComponent title="justify-content " code={code} />
 
-            <OutputComponent render={ouputPanel} />
+            <OutputComponent render={outputPanel} />
         </div>
 
     )

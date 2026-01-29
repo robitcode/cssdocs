@@ -1,6 +1,8 @@
+import profileImg from "../../assets/196452524.png"
 import { useState } from "react";
 import DetailComponent from "../../components/DetailComponent";
 import OutputComponent from "../../components/OutputComponent";
+import HeaderComponent from "../../components/HeaderComponent";
 
 const code = `align-content : start;
 align-content : around;
@@ -15,8 +17,13 @@ align-content : start;
 align-content : stretch;`;
 
 export default function AlignContent() {
-
-    const ouputPanel = {
+    const headerPanel = {
+        'title': 'Using align-content',
+        'author': 'robit',
+        'authorpfp': profileImg,
+        'topics': ['flexbox','flex-wrap','align-content']
+    }
+    const outputPanel = {
         'title': "CSS Demo: align-content",
         'buttons': [
             { 'name': 'align-content : around;', 'state': 'content-around' },
@@ -48,9 +55,10 @@ export default function AlignContent() {
 
     return (
         <div className="min-h-screen w-full space-y-6">
+            <HeaderComponent header={headerPanel} />
             <DetailComponent title="align-content " code={code} />
 
-            <OutputComponent render={ouputPanel} />
+            <OutputComponent render={outputPanel} />
             <hr />
         </div>
 

@@ -5,6 +5,7 @@ import DetailComponent from './components/DetailComponent';
 import AlignItems from './guide/box-positioning/AlignItems';
 import JustifyContent from './guide/box-positioning/JustifyContent';
 import AlignContent from './guide/box-positioning/AlignContent';
+import HeaderComponent from './components/HeaderComponent';
 
 
   function App() {
@@ -13,7 +14,7 @@ import AlignContent from './guide/box-positioning/AlignContent';
     const components = [
       { "id": "align-items", "name": "Align-Items", "components": <AlignItems /> },
       { "id": "justify-content", "name": "Justify-Content", "components": <JustifyContent /> },
-      { "id": "align-content", "name": "Align-Items", "components": <AlignContent /> }
+      { "id": "align-content", "name": "Align-Content", "components": <AlignContent /> },
     ]
 
     const Preview = components.find(c => c.id === selected)?.components;
