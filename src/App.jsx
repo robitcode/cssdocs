@@ -1,16 +1,20 @@
 import { useState } from 'react'
 import './App.css'
-import Transitions from './guide/transition/Transitions';
+
 import DetailComponent from './components/DetailComponent';
 import GridLayout from './guide/box-positioning/AlignItems';
 import AlignItems from './guide/box-positioning/AlignItems';
+import JustifyContent from './guide/box-positioning/JustifyContent';
+import AlignContent from './guide/box-positioning/AlignContent';
 
 
   function App() {
     const [expanded, setExpanded] = useState(true);
     const [selected, setSelected] = useState()
     const components = [
-      { "id": "align", "name": "Align-Items", "components": <AlignItems /> }
+      { "id": "align-items", "name": "Align-Items", "components": <AlignItems /> },
+      { "id": "justify-content", "name": "Justify-Content", "components": <JustifyContent /> },
+      { "id": "align-content", "name": "Align-Items", "components": <AlignContent /> }
     ]
 
     const Preview = components.find(c => c.id === selected)?.components;
@@ -19,7 +23,7 @@ import AlignItems from './guide/box-positioning/AlignItems';
       <div className='flex h-screen bg-gray-50 text-gray-900 font-sans'>
 
         {/* Sidebar */}
-        <aside className={`h-screen transition-all duration-300 ease-in-out ${expanded ? 'w-60' : 'w-fit'}`}>
+        <aside className={`h-screen transition-all duration-300 ease-in-out w-40 md:w-fit`}>
           <nav className='h-full flex flex-col bg-white border-r shadow-sm'>
 
             {/* Logo / Toggle Area */}
