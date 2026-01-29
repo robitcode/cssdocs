@@ -1,53 +1,40 @@
-import DetailComponent from "../../components/DetailComponent"
+import { useState } from "react";
+import DetailComponent from "../../components/DetailComponent";
+import OutputComponent from "../../components/OutputComponent";
 
-const code = '';
+const code = `justify-content : start;
+justify-content : center;
+justify-content : space-between;
+justify-content : space-around;
+justify-content : space-evenely`
 
 export default function JustifyContent() {
+    const ouputPanel = {
+        'title': "CSS Demo: justify-content",
+        'buttons': [
+            { 'name': 'justify-content : start;', 'state': 'justify-start' },
+            { 'name': 'justify-content : center;', 'state': 'justify-center' },
+            { 'name': 'justify-content : space-between;', 'state': 'justify-between' },
+            { 'name': 'justify-content : space-around;', 'state': 'justify-around' },
+            { 'name': 'justify-content : space-evenly;', 'state': 'justify-evenly' }
+        ],
+        'output': (state) => (
+            <div className={`h-fit flex w-full ${state}`}>
+                <span className="p-2 h-fit border border-blue-500">one</span>
+                <span className="p-2 h-fit border border-blue-500">two</span>
+                <span className="p-2 h-fit border border-blue-500">three</span>
+            </div>
+        )
+    }
+
     return (
         <div className="min-h-screen w-full space-y-6">
-            <DetailComponent title="align-items" code={code} />
+            <DetailComponent title="justify-content " code={code} />
 
-            <div className="text-white w-full border border-x-2 border-slate-950 bg-gray-900 h-fit rounded-xl">
-                <header className="h-fit text-white w-full border-2 rounded-tl-xl rounded-tr-xl border-gray-500 px-5 py-3">
-                    CSS Demo: align-items
-                </header>
-
-                {/* Column on mobile, Row on md/lg */}
-                <div className="flex flex-col md:flex-row w-full">
-
-                    {/* Left Row: Menu with buttons! */}
-                    {/* w-full on mobile, w-1/2 (50%) on desktop */}
-                    <menu className="flex flex-col p-2 shadow-inner border-gray-500 border-2 
-                        overflow-y-auto w-full md:w-1/2 h-full">
-
-                        <button className="my-1 rounded-md border-3 border-gray-400 flex text-amber-300 font-mono px-1 py-3 focus:border-blue-400">
-                            <p className=" mr-auto ml-1 w-fit">justify-content: start;</p>
-                        </button>
-                        <button className="my-1 border-3 rounded-md border-gray-400 flex text-amber-300 font-mono px-1 py-3 outline-none focus:border-blue-400">
-                            <p className=" mr-auto ml-1 w-fit">justify-content: center;</p>
-                        </button>
-                        <button className="my-1 border-3 rounded-md border-gray-400 flex text-amber-300 font-mono px-1 py-3 outline-none focus:border-blue-400">
-                            <p className="mr-auto ml-1 w-fit">justify-content: space-between;</p>
-                        </button>
-                        <button className="my-1 border-3 rounded-md border-gray-400 flex text-amber-300 font-mono px-1 py-3 outline-none focus:border-blue-400">
-                            <p className="mr-auto ml-1 w-fit">justify-content: space-around;</p>
-                        </button>
-                        <button className="my-1 border-3 rounded-md border-gray-400 flex text-amber-300 font-mono px-1 py-3 outline-none focus:border-blue-400">
-                            <p className="mr-auto ml-1 w-fit">justify-content: space-evenly;</p>
-                        </button>
-                    </menu>
-
-                    {/* Right Row: Output area */}
-                    {/* w-full on mobile, w-1/2 (50%) on desktop */}
-
-                    <output className="text-white border-t-2 border-gray-500 p-4 min-h-50 w-full md:w-1/2">
-                        <div>
-
-                        </div>
-                    </output>
-                </div>
-            </div>
+            <OutputComponent render={ouputPanel} />
         </div>
+
+
     )
 }
 
