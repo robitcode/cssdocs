@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 
 import DetailComponent from './components/DetailComponent';
-import GridLayout from './guide/box-positioning/AlignItems';
 import AlignItems from './guide/box-positioning/AlignItems';
 import JustifyContent from './guide/box-positioning/JustifyContent';
 import AlignContent from './guide/box-positioning/AlignContent';
