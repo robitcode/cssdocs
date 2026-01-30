@@ -2,19 +2,22 @@ import { useState } from 'react'
 import './App.css'
 
 import DetailComponent from './components/DetailComponent';
-import AlignItems from './guide/box-positioning/AlignItems';
-import JustifyContent from './guide/box-positioning/JustifyContent';
-import AlignContent from './guide/box-positioning/AlignContent';
 import HeaderComponent from './components/HeaderComponent';
-
+import AlignItems from './guide/box-positioning/AlignItems';
+import AlignContent from './guide/box-positioning/AlignContent';
+import JustifyContent from './guide/box-positioning/JustifyContent';
+import JustifyItems from './guide/box-positioning/JustifyItems';
+import JustifySelf from './guide/box-positioning/JustifySelf';
 
   function App() {
     const [expanded, setExpanded] = useState(true);
     const [selected, setSelected] = useState()
     const components = [
       { "id": "align-items", "name": "Align-Items", "components": <AlignItems /> },
-      { "id": "justify-content", "name": "Justify-Content", "components": <JustifyContent /> },
       { "id": "align-content", "name": "Align-Content", "components": <AlignContent /> },
+      { "id": "justify-content", "name": "Justify-Content", "components": <JustifyContent /> },
+      { "id": "justify-item", "name": "Justify-Item", "components": <JustifyItems /> },
+      { "id": "justify-self", "name": "Justify-Self", "components": < JustifySelf/> },
     ]
 
     const Preview = components.find(c => c.id === selected)?.components;
@@ -82,7 +85,7 @@ import HeaderComponent from './components/HeaderComponent';
             </div>
           </header>
               
-          <section className='flex-1 overflow-auto p-12 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]'>
+          <section className='flex-1 overflow-auto p-12 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[16px_16px]'>
 
               <div className='max-w-5xl mx-auto'>
                 {/* The Render zone */}

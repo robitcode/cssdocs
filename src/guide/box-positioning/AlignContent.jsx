@@ -4,17 +4,17 @@ import DetailComponent from "../../components/DetailComponent";
 import OutputComponent from "../../components/OutputComponent";
 import HeaderComponent from "../../components/HeaderComponent";
 
-const code = `align-content : start;
-align-content : around;
-align-content : baseline;
-align-content : space-between;
-align-content : space-around;
-align-content : center;
-align-content : space-evenly;
-align-content : none;
-align-content : normal;
-align-content : start;
-align-content : stretch;`;
+const code = `align-content:start;
+align-content:around;
+align-content:baseline;
+align-content:space-between;
+align-content:space-around;
+align-content:center;
+align-content:space-evenly;
+align-content:none;
+align-content:normal;
+align-content:start;
+align-content:stretch;`;
 
 export default function AlignContent() {
     const headerPanel = {

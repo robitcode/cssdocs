@@ -1,20 +1,20 @@
-import profileImg from "../../assets/196452524.png"
+import profileImg1 from "../../assets/image.png"
 import { useState } from "react";
 import DetailComponent from "../../components/DetailComponent";
 import OutputComponent from "../../components/OutputComponent";
 import HeaderComponent from "../../components/HeaderComponent";
 
-const code = `justify-content : start;
-justify-content : center;
-justify-content : space-between;
-justify-content : space-around;
-justify-content : space-evenely;`;
+const code = `justify-content:start;
+justify-content:center;
+justify-content:space-between;
+justify-content:space-around;
+justify-content:space-evenely;`;
 
 export default function JustifyContent() {
     const headerPanel = {
         'title': 'Using justify-content',
-        'author': 'robit',
-        'authorpfp': profileImg,
+        'author': 'pragya',
+        'authorpfp': profileImg1,
         'topics': ['flexbox', 'justify-content']
     }
     const outputPanel = {
