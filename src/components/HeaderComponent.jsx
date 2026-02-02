@@ -20,9 +20,9 @@ export default function HeaderComponent(props) {
                     )}
                     <div className="group flex hover:-translate-y items-center p-4">
                         <p className="ml-5 font-light font-sans min-w-fit tracking-tighter">
-                            Made by <a href="_blank" className="group-hover:font-bold">{props.header.author}</a>
+                            Made by <a href="_blank" className="hover:underline group-hover:font-bold">{props.header.author}</a>
                         </p>
-                        <img src={props.header.authorpfp} alt="" className="ml-2 border size-10 rounded-full hover:mask-b-from-4" />
+                        <img src={props.header.authorpfp} alt="" className="ml-2 border size-10 rounded-full group-hover:mask-b-from-4" />
                     </div>
                 </div>
             </div>
