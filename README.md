@@ -14,7 +14,7 @@ A high-performance, visual-first learning platform for modern CSS. Unlike tradit
 
 ## Demo
 
-![App Preview](./src/assets/demo.png)
+![App Preview](./public/demo.gif)
 
 ## Project **Structure**
 
