@@ -1,11 +1,6 @@
 import { useState } from "react"
 
 export default function DetailComponent(props) {
-    const shapes = [
-        { "id": "square", "style": "rounded-sm" },
-        { "id": "circle", "style": "rounded-full" },
-        { "id": "text", "style": "" }
-    ]
     const [shape, setShape] = useState("square");
     return (
         <div className="bg-gray-300  border-gray-900 dark:bg-gray-700 rounded-xl flex flex-col justify-evenly font-bold font-mono p-4">

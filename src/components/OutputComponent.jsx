@@ -2,10 +2,8 @@ import { useState } from "react"
 
 export default function OutputComponent(props) {
     const shapes = [
-        { "id": "square", "style": "rounded-sm h-10", 'label': '■ Square' },
-        { "id": "circle", "style": "rounded-full h-10 min-w-10", 'label': '● Circle' },
-        { "id": "text", "style": "", 'label': 'Text ' },
-        { "id": "numbers", "style": "", 'label': "Numbers " }
+        { "id": "square", "style": "rounded-sm ", 'label': '■ Square' },
+        { "id": "circle", "style": "rounded-full ", 'label': '● Circle' }
     ]
     const [state, setState] = useState('');
     const [currentShape, setCurrentShape] = useState("square");
