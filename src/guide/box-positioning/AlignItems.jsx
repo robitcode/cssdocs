@@ -27,7 +27,7 @@ export default function AlignItems() {
         ],
         'output': (state,shape) => (
             <div className={`h-min flex flex-col gap-4 relative ${state}`}>
-                <span className={`p-2 min-w-10 ${shape.style} border border-blue-500  bg-amber-600`}></span>
+                <span className={`p-2 min-w-10 h-10 ${shape.style} border border-blue-500  bg-amber-600`}></span>
                 <span className={`p-2 min-w-10 h-10 ${shape.style} border border-blue-500  bg-amber-600`}></span>
                 <span className={`p-2 min-w-10 h-10 ${shape.style} border border-blue-500  bg-amber-600`}></span>
             </div>
