@@ -124,6 +124,5 @@ This project is built for the community. If you want to add a new CSS property v
 
 ## Contributers
 
-<img src="./src/assets/196452524.png" width="40" alt="App Demo">
-<img src="./src/assets/image.png" width="40" alt="App Demo">
+<img src="./src/assets/196452524.png" width="40" alt="App Demo"><img src="./src/assets/image.png" width="40" alt="App Demo">
 
