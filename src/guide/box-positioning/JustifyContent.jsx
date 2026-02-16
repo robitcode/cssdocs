@@ -39,7 +39,6 @@ export default function JustifyContent() {
         <div className="min-h-screen w-full space-y-6">
             <HeaderComponent header={headerPanel} />
             <DetailComponent title="justify-content " code={code} />
-
             <OutputComponent render={outputPanel} />
         </div>
 

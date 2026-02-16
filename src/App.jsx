@@ -8,6 +8,7 @@ import AlignContent from './guide/box-positioning/AlignContent';
 import JustifyContent from './guide/box-positioning/JustifyContent';
 import JustifyItems from './guide/box-positioning/JustifyItems';
 import JustifySelf from './guide/box-positioning/JustifySelf';
+import FlexGrow from './guide/box-positioning/FlexGrow';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,6 +19,7 @@ function App() {
     { "id": "justify-content", "name": "Justify-Content", "components": <JustifyContent /> },
     { "id": "justify-item", "name": "Justify-Item", "components": <JustifyItems /> },
     { "id": "justify-self", "name": "Justify-Self", "components": < JustifySelf /> },
+    { "id": "flex-grow", "name": "Flex-Grow", "components": < FlexGrow /> },
   ]
 
   const Preview = components.find(c => c.id === selected)?.components;
@@ -68,7 +70,7 @@ function App() {
                   className={`w-full text-center p-4 rounded-xl text-sm font-medium transition-all
                         ${selected == component.id
                       ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 shadow-sm'
-                      : 'text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 dark:hover:bg-gray-800 dark:text-gray-400' 
+                      : 'text-zinc-600 hover:bg-zinc-50 hover:text-gray-800 dark:hover:bg-gray-800 dark:text-gray-400' 
                     }`}>
                   {component.name}
                 </button>
