@@ -1,5 +1,4 @@
-import profileImg1 from "../../assets/image.png"
-import { useState } from "react";
+import profileImg1 from "../../assets/image.png";
 import DetailComponent from "../../components/DetailComponent";
 import OutputComponent from "../../components/OutputComponent";
 import HeaderComponent from "../../components/HeaderComponent";
@@ -26,16 +25,16 @@ export default function JustifySelf() {
             {'name':'justify-self: end;','state':'justify-self-end'},
             {'name':'justify-self: auto;','state':'justify-self-auto'}
         ],
-        'output':(state)=>(
+        'output':(state,shape)=>(
             <div className="h-min grid gap-4 ">
                 <div className={`grid h-10 ${state}`}>
-                    <span className="p-2 h-fit border border-blue-500 ">one</span>
+                    <span className={`p-2 text-center ${shape.style} h-fit border border-blue-500 `}>one</span>
                 </div>
                 <div className={`grid h-10 ${state}`}>
-                    <span className="p-2 h-fit border border-blue-500">two</span>
+                    <span className={`p-2 text-center ${shape.style} h-fit border border-blue-500`}>two</span>
                 </div>
                 <div className={`grid h-10 ${state}`}>
-                    <span className="p-2 h-fit border border-blue-500">three</span>
+                    <span className={`p-2 text-center ${shape.style} h-fit border border-blue-500`}>three</span>
                 </div>
             </div>
         )

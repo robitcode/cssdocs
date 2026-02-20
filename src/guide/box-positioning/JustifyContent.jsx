@@ -1,5 +1,4 @@
 import profileImg1 from "../../assets/image.png"
-import { useState } from "react";
 import DetailComponent from "../../components/DetailComponent";
 import OutputComponent from "../../components/OutputComponent";
 import HeaderComponent from "../../components/HeaderComponent";
@@ -8,7 +7,7 @@ const code = `justify-content:start;
 justify-content:center;
 justify-content:space-between;
 justify-content:space-around;
-justify-content:space-evenely;`;
+justify-content:space-evenly;`;
 
 export default function JustifyContent() {
     const headerPanel = {
@@ -26,11 +25,11 @@ export default function JustifyContent() {
             { 'name': 'justify-content : space-around;', 'state': 'justify-around' },
             { 'name': 'justify-content : space-evenly;', 'state': 'justify-evenly' }
         ],
-        'output': (state) => (
-            <div className={`h-fit flex w-full ${state}`}>
-                <span className="p-2 h-fit border border-blue-500">one</span>
-                <span className="p-2 h-fit border border-blue-500">two</span>
-                <span className="p-2 h-fit border border-blue-500">three</span>
+        'output': (state,shape) => (
+            <div className={`h-min flex gap-4 relative ${state}`}>
+                <span className={`p-2 min-w-10 ${shape.style} border border-blue-500 `}>one</span>
+                <span className={`p-2 min-w-10 ${shape.style} border border-blue-500 `}>two</span>
+                <span className={`p-2 min-w-10 ${shape.style} border border-blue-500 `}>three</span>
             </div>
         )
     }

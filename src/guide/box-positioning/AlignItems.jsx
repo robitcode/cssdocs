@@ -1,6 +1,4 @@
 import profileImg1 from "../../assets/196452524.png"
-import profileImg2 from "../../assets/444b8f92410b3896456551a41f7e08c3.jpg"
-import { useState } from "react";
 import DetailComponent from "../../components/DetailComponent";
 import OutputComponent from "../../components/OutputComponent";
 import HeaderComponent from "../../components/HeaderComponent";
@@ -28,8 +26,8 @@ export default function AlignItems() {
         'output': (state,shape) => (
             <div className={`h-min flex flex-col gap-4 relative ${state}`}>
                 <span className={`p-2 min-w-10 ${shape.style} border border-blue-500 `}>one</span>
-                <span className={`p-2 min-w-10 h-10 ${shape.style} border border-blue-500 `}>two</span>
-                <span className={`p-2 min-w-10 h-10 ${shape.style} border border-blue-500 `}>three</span>
+                <span className={`p-2 min-w-10 ${shape.style} border border-blue-500 `}>two</span>
+                <span className={`p-2 min-w-10 ${shape.style} border border-blue-500 `}>three</span>
             </div>
         )
     }
